@@ -26,7 +26,7 @@ public class Trida {
     public String vratSeznamZaku(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Seznam Žáků:+\n------------------------------");
+        sb.append("Seznam Žáků:\n------------------------------\n");
         zaci.forEach(zak -> sb.append(zak.vratInfo()).append("\n"));
         sb.append("------------------------------");
 
@@ -39,6 +39,7 @@ public class Trida {
         for(int i = 0; i < zaci.size(); i++){
             Zak zak = zaci.get(i);
             sb.append(i + 1);
+            sb.append(" ");
             sb.append(zak.getJmeno()).append(" ").append(zak.getPrijmeni());
             sb.append("\n");
         }
@@ -57,7 +58,7 @@ public class Trida {
         }
     }
     public void odeberZaka(Zak odebiranyZak){
-        String osloveni = odebiranyZak.isChlapec() ? "Žákyně" : "Žák";
+        String osloveni = odebiranyZak.isChlapec() ? "Žák" : "Žákyně";
         boolean odebran = zaci.removeIf(zak -> zak.equals(odebiranyZak));
 
         if(odebran){
