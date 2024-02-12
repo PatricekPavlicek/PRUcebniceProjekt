@@ -22,5 +22,11 @@ public class Main {
 
 
         Trida trida1 = new Trida((byte) 1, "Pepa Pavel");
+
+        trida1.pridejNovehoZaka(zak);
+        System.out.println(trida1.vratOcislovnySeznamZaku());
+
+        trida1.zvysRocnik();
+        System.out.println(trida1.vratSeznamZaku());
     }
 }
